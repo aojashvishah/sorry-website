@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry 💗</title>
+<style>
+body {
+  margin: 0;
+  padding: 25px 15px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg,#ffe0ed,#fff0f5);
+  color: #853653;
+}
+main {
+  max-width: 520px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 24px;
+  box-shadow: 0 8px 25px #d98ca544;
+}
+h1 { color: #e34c85; }
+button {
+  background: #ed6a9a;
+  color: white;
+  border: 0;
+  padding: 12px 17px;
+  margin: 6px;
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+textarea {
+  width: 95%;
+  height: 100px;
+  border: 1px solid #f0a9c4;
+  border-radius: 12px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+#reply { font-weight: bold; }
+</style>
+</head>
+<body>
+<main>
+  <h1>I'm Sorry, My Favourite Person 💗</h1>
+  <p>Somu please maaf kr do lekin tum kabhi nhi smjhta hai yr ki hum kya bolna chah rhe hai hmko ishmit ko prove nhi krna tha yr🥺🎀</p>
+  <p>hum bas tmko ye samjhana chah rhe the ki jo hum nhi kiye wo ye kyu bolega ,
+  tmko support krne ke jgh ulta mere pe hi gussa kyu yr. 💕</p>
+  <p>Thoda sa smjho yr please bhot aage tk jana hai agar aise hi ladte rhe toh kya higa fir🌷</p>
+
+  <h3>maaf kar do please..kar diya?🥺</h3>
+  <button onclick="answer('Thank you! 💗')">
+    Haan, maaf kiya 💗
+  </button>
+  <button onclick="answer('Koi baat nahi, jab ready ho tab baat karna 💕')">
+    Abhi bhi gussa hai😤
+  </button>
+  <p id="reply"></p>
+
+  <h3>Somu yr hmlog chota chota baat pe ladte hai ye sahi nhi hai yr darr lgta hai yr tmko khone se.
+    tum smjho na thoda ki hum usko kyu prove krege kon hai wo mera??
+    baar baar dhamki de rha hai ki hum kuch kar lenge kych kar lenge toh insaan thoda 
+    toh sochega na yr koi hhi nhi chahta hai ki uske wjh se koi ladak suicide kare💌</h3>
+  <textarea id="letter" placeholder="I am sorry yarr ho sake toh maaf karna..."></textarea>
+  <br>
+  <button onclick="saveLetter()">Save Letter 💌</button>
+  <p id="saved"></p>
+</main>
+
+<script>
+function answer(message) {
+  document.getElementById("reply").textContent = message;
+}
+
+function saveLetter() {
+  const letter = document.getElementById("letter").value;
+  localStorage.setItem("sorryLetter", letter);
+  document.getElementById("saved").textContent =
+    "Letter saved on this browser 💖";
+}
+</script>
+</body>
+    </html>
+    
